@@ -1,0 +1,17 @@
+application:
+  name: "KamaUI Example"
+  author: "KamaUI"
+  version: "0.0.1"
+  locale: "en_US"
+  icon: "application.svg"
+
+  base-package: "kexample"
+  controller-package: "{base}.controller"
+  resolver-package: "{base}.resolver"
+  startup-package: "{base}.startup"
+
+window:
+  width: 1080
+  height: 720
+  min-width: 960
+  min-height: 540

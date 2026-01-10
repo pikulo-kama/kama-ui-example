@@ -1,0 +1,36 @@
+[project]
+name = "kama-example"
+version = "0.0.1"
+license = {file = "LICENSE"}
+classifiers = [
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+]
+dependencies = [
+    "kama-ui @ git+https://github.com/pikulo-kama/kama-ui.git",
+    "kama-ui-json-plugin @ git+https://github.com/pikulo-kama/kama-ui-json-plugin.git",
+    "kama-dbm @ git+https://github.com/pikulo-kama/kama-dbm.git",
+    "PyQt6 >= 6.10.0, < 7.0.0",
+    "pyqt6-sip >= 13.10.3, < 14.0.0"
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest >= 9.0.1, < 10.0.0",
+    "pytest-qt >= 4.5.0, < 5.0.0",
+    "pytest-mock >= 3.15.1, < 4.0.0",
+    "pytest-cov >= 7.0.0, < 8.0.0"
+]
+
+[tool.setuptools.packages.find]
+# Only include the actual source code folder
+where = ["."]
+include = ["kexample*"]
+
+[tool.setuptools.package-data]
+# Ensure non-python files are still included in the build
+"*" = ["*.json", "*.yaml", "*.sql", "*.exe"]
+
+[tool.pytest.ini_options]
+addopts = "--cov=kexample --cov-report=term-missing"

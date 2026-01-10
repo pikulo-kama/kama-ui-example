@@ -1,0 +1,95 @@
+[
+  {
+      "widget_id": "container",
+      "section_id": "root",
+      "widget_type": "KWidget",
+      "layout_type": "KVBoxLayout",
+      "spacing": 30,
+      "margin_bottom": 80,
+      "order_id": 1
+    },
+    {
+      "widget_id": "app_logo",
+      "parent_widget_id": "container",
+      "section_id": "root",
+      "content": "pixmap{application.svg, scale: 160}",
+      "widget_type": "KLabel",
+      "alignment_string": "center",
+      "order_id": 1
+    },
+    {
+      "widget_id": "counter_container",
+      "parent_widget_id": "container",
+      "section_id": "root",
+      "widget_type": "KWidget",
+      "layout_type": "KHBoxLayout",
+      "alignment_string": "center",
+      "height": 80,
+      "order_id": 2
+    },
+    {
+      "widget_id": "counter_label",
+      "content": "Counter:",
+      "parent_widget_id": "counter_container",
+      "style_object_name": "heroText",
+      "section_id": "root",
+      "widget_type": "KLabel",
+      "order_id": 1
+    },
+    {
+      "widget_id": "counter_value",
+      "content": "data{counter, 0}",
+      "parent_widget_id": "counter_container",
+      "style_object_name": "heroText",
+      "section_id": "root",
+      "widget_type": "KLabel",
+      "order_id": 2,
+      "refresh_events": [
+        "counter_value_change"
+      ],
+      "stylesheet": "font-weight: bold;"
+    },
+    {
+      "widget_id": "controls_container",
+      "parent_widget_id": "container",
+      "section_id": "root",
+      "widget_type": "KWidget",
+      "layout_type": "KHBoxLayout",
+      "height": 80,
+      "margin_left": 100,
+      "margin_right": 100,
+      "spacing": 100,
+      "stylesheet": "background-color: color('surface-a20')",
+      "order_id": 3
+    },
+    {
+      "widget_id": "increment_button",
+      "content": "Increment",
+      "controller": "IncrementButtonController",
+      "parent_widget_id": "controls_container",
+      "section_id": "root",
+      "widget_type": "KPushButton",
+      "stylesheet": "background-color: color('primary-a20')",
+      "order_id": 1
+    },
+    {
+      "widget_id": "decrement_button",
+      "content": "Decrement",
+      "controller": "DecrementButtonController",
+      "parent_widget_id": "controls_container",
+      "section_id": "root",
+      "widget_type": "KPushButton",
+      "stylesheet": "background-color: color('danger-a20')",
+      "order_id": 2
+    },
+    {
+      "widget_id": "reset_button",
+      "content": "Reset",
+      "controller": "ResetButtonController",
+      "parent_widget_id": "controls_container",
+      "section_id": "root",
+      "widget_type": "KPushButton",
+      "stylesheet": "background-color: color('danger-a0')",
+      "order_id": 3
+    }
+]
