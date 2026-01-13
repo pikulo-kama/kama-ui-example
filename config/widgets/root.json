@@ -5,6 +5,7 @@
     "widget_type": "KWidget",
     "layout_type": "KVBoxLayout",
     "spacing": 30,
+    "margin_top": 80,
     "margin_bottom": 80,
     "children": [
       {
@@ -18,7 +19,6 @@
         "widget_type": "KWidget",
         "layout_type": "KHBoxLayout",
         "alignment_string": "center",
-        "height": 80,
         "children": [
           {
             "widget_id": "counter_label",
@@ -34,42 +34,70 @@
             "refresh_events": [
               "counter_value_change"
             ],
-            "stylesheet": "font-weight: bold;"
+            "stylesheet": {
+              "font-weight": "bold"
+            }
           }
         ]
       },
       {
         "widget_id": "controls_container",
         "widget_type": "KWidget",
-        "layout_type": "KHBoxLayout",
-        "height": 80,
-        "margin_left": 100,
-        "margin_right": 100,
-        "spacing": 100,
-        "stylesheet": "background-color: color('surface-a20')",
+        "layout_type": "KVBoxLayout",
+        "alignment_string": "center",
+        "spacing": 5,
+        "margin_top": 10,
+        "margin_bottom": 10,
+        "stylesheet": {
+          "background-color": "rgba('success-a0', 0.1)"
+        },
         "children": [
           {
-            "widget_id": "increment_button",
-            "content": "Increment",
-            "controller": "IncrementButtonController",
-            "widget_type": "KPushButton",
-            "stylesheet": "background-color: color('primary-a20')"
-          },
-          {
-            "widget_id": "decrement_button",
-            "content": "Decrement",
-            "controller": "DecrementButtonController",
-            "widget_type": "KPushButton",
-            "stylesheet": "background-color: color('danger-a20')"
+            "widget_id": "inc_dec_controls",
+            "widget_type": "KWidget",
+            "layout_type": "KHBoxLayout",
+            "children": [
+              {
+                "widget_id": "decrement_button",
+                "content": "-",
+                "tooltip": "Decrement",
+                "controller": "DecrementButtonController",
+                "widget_type": "KPushButton",
+                "style_object_name": "heroText",
+                "width": 100,
+                "stylesheet": {
+                  "background-color": "color('primary-a10')"
+                }
+              },
+              {
+                "widget_id": "increment_button",
+                "content": "+",
+                "tooltip": "Increment",
+                "controller": "IncrementButtonController",
+                "widget_type": "KPushButton",
+                "style_object_name": "heroText",
+                "width": 100,
+                "stylesheet": {
+                  "background-color": "color('warning-a10')"
+                }
+              }
+            ]
           },
           {
             "widget_id": "reset_button",
             "content": "Reset",
             "controller": "ResetButtonController",
             "widget_type": "KPushButton",
-            "stylesheet": "background-color: color('danger-a0')"
+            "style_object_name": "heroText",
+            "stylesheet": {
+              "background-color": "color('danger-a10')"
+            }
           }
         ]
+      },
+      {
+        "widget_id": "footer_spacer",
+        "widget_type": "KSpacer"
       }
     ]
   }
