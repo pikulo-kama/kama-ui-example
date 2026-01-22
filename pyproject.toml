@@ -33,4 +33,5 @@ include = ["kexample*"]
 "*" = ["*.json", "*.yaml", "*.sql", "*.exe"]
 
 [tool.pytest.ini_options]
+pythonpath = ["src"]
 addopts = "--cov=kexample --cov-report=term-missing"
