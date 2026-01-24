@@ -10,6 +10,7 @@ class TestIncrementButtonController:
         """
 
         from kexample.controller.button import IncrementButtonController
+        from kui.core.metadata import ControllerArgs
 
         button = mocker.MagicMock()
         application = mocker.MagicMock()
@@ -19,7 +20,7 @@ class TestIncrementButtonController:
         module_patch("dynamic_data", return_value=5)
         add_dynamic_data_mock = module_patch("add_dynamic_data")
 
-        controller.setup(button)
+        controller.setup(button, ControllerArgs({}))
 
         on_click_callback = button.clicked.connect.call_args[0][0]
         on_click_callback()
@@ -40,6 +41,7 @@ class TestDecrementButtonController:
         """
 
         from kexample.controller.button import DecrementButtonController
+        from kui.core.metadata import ControllerArgs
 
         button = mocker.MagicMock()
         application = mocker.MagicMock()
@@ -49,7 +51,7 @@ class TestDecrementButtonController:
         module_patch("dynamic_data", return_value=initial_value)
         add_dynamic_data_mock = module_patch("add_dynamic_data")
 
-        controller.setup(button)
+        controller.setup(button, ControllerArgs({}))
 
         on_click_callback = button.clicked.connect.call_args[0][0]
         on_click_callback()
@@ -66,6 +68,7 @@ class TestResetButtonController:
         """
 
         from kexample.controller.button import ResetButtonController
+        from kui.core.metadata import ControllerArgs
 
         button = mocker.MagicMock()
         application = mocker.MagicMock()
@@ -76,7 +79,7 @@ class TestResetButtonController:
         module_patch("dynamic_data", return_value=100)
         add_dynamic_data_mock = module_patch("add_dynamic_data")
 
-        controller.setup(button)
+        controller.setup(button, ControllerArgs({}))
 
         on_click_callback = button.clicked.connect.call_args[0][0]
         on_click_callback()
