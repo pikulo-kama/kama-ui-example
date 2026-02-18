@@ -1,0 +1,10 @@
+
+label:
+  Counter: "[!!! Čôúñţéŕ !!!]"
+  Decrement: "[!!! Đéćŕéméñţ !!!]"
+  Increment: "[!!! Įñćŕéméñţ !!!]"
+  Reset: "[!!! Réšéţ !!!]"
+
+message:
+  PseudoModeOn: "Oh, not sure what happened..."
+  PseudoModeOff: "Well, it looks like you fixed that!"

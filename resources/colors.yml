@@ -1,0 +1,6 @@
+
+default:
+  primary: "#2a7db6"
+  success: "#1b7f5c"
+  warning: "#dfae44"
+  danger:  "#d06262"

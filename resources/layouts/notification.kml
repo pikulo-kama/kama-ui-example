@@ -1,0 +1,9 @@
+<KamaSection name="notification">
+<KamaDialog class="notification-dialog" layout="horizontal" alignment="center"
+            controller="DialogController" width="400" ml="10" mr="10"
+>
+    <KamaWordWrapLabel class="font-body" alignment="vcenter">
+        data{dialogMessage}
+    </KamaWordWrapLabel>
+</KamaDialog>
+</KamaSection>

@@ -1,0 +1,10 @@
+
+label:
+  Counter: "Counter"
+  Decrement: "Decrement"
+  Increment: "Increment"
+  Reset: "Reset"
+
+message:
+  PseudoModeOn: "Oh, not sure what happened..."
+  PseudoModeOff: "Well, it looks like you fixed that!"

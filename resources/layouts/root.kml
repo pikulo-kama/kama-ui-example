@@ -1,0 +1,43 @@
+<KamaSection name="root">
+<KamaWidget layout="vertical" alignment="center" spacing="30">
+
+    <KamaWidget layout="vertical" spacing="10">
+        <KamaLabel alignment="center">
+            pixmap{application.svg, scale: 130}
+        </KamaLabel>
+
+        <!--  Counter  -->
+        <KamaWidget layout="horizontal" alignment="center" spacing="10">
+            <KamaLabel class="font-heading">
+                tr{label_Counter}:
+            </KamaLabel>
+            <KamaLabel class="font-heading fw-bold" refresh_events="counter_value_change">
+                data{counter, 0}
+            </KamaLabel>
+        </KamaWidget>
+    </KamaWidget>
+
+    <!--  Counter Controls  -->
+    <KamaWidget class="controls-container" layout="vertical" alignment="center" spacing="5" mt="15" mb="15">
+
+        <!--  Increment/Decrement  -->
+        <KamaWidget layout="horizontal">
+            <KamaPushButton class="font-large bg-primary" width="100" tooltip="tr{label_Decrement}"
+                            controller="DecrementButtonController">
+                -
+            </KamaPushButton>
+            <KamaPushButton class="font-large bg-warning" width="100" tooltip="tr{label_Increment}"
+                            controller="IncrementButtonController">
+                +
+            </KamaPushButton>
+        </KamaWidget>
+
+        <!--  Reset Button  -->
+        <KamaPushButton class="font-body fg-danger" controller="ResetButtonController">
+            tr{label_Reset}
+        </KamaPushButton>
+    </KamaWidget>
+
+    <KamaSpacer/>
+</KamaWidget>
+</KamaSection>

@@ -1,0 +1,12 @@
+
+.bg-primary {
+    background-color: color('primary');
+}
+
+.bg-warning {
+    background-color: color('warning');
+}
+
+.fg-danger {
+    color: color('danger');
+}

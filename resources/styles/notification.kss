@@ -1,0 +1,8 @@
+
+.notification-dialog {
+    qproperty-top_offset: 10;
+    qproperty-show_duration: 2000;
+
+    border-radius: 5px;
+    background-color: color("success");
+}

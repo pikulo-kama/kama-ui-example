@@ -1,0 +1,12 @@
+
+heading:
+  family: "PT Sans Caption"
+  size: 33
+
+large:
+  family: "PT Sans Caption"
+  size: 25
+
+body:
+  family: "PT Sans Caption"
+  size: 14
